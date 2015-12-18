@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hectorjavier.elementosgui.R;
+import com.example.hectorjavier.elementosgui.radiogroup.MiRadioGroup;
 import com.example.hectorjavier.elementosgui.tabhost.MiTabHost;
 import com.example.hectorjavier.elementosgui.tabhost.MiTabHost2;
 
@@ -26,8 +27,10 @@ public class MiListView extends ListActivity {
         elementos.add(new ElementoLista("TabHost",R.drawable.tab));
         elementos.add(new ElementoLista("TabHost2",R.drawable.tab));
         elementos.add(new ElementoLista("ListView",R.drawable.list));
+        elementos.add(new ElementoLista("ListView2",R.drawable.list));
+        elementos.add(new ElementoLista("RadioGroup",R.drawable.radio));
 
-        setListAdapter(new MiAdaptador(elementos,getApplicationContext()));
+        setListAdapter(new MiAdaptador(elementos, getApplicationContext()));
 
     }
 
@@ -45,6 +48,14 @@ public class MiListView extends ListActivity {
                 break;
             case 2:
                 startActivity(new Intent(getApplicationContext(), MiListView.class));
+                finish();
+                break;
+            case 3:
+                startActivity(new Intent(getApplicationContext(), MiListView2.class));
+                finish();
+                break;
+            case 4:
+                startActivity(new Intent(getApplicationContext(), MiRadioGroup.class));
                 finish();
                 break;
             default:

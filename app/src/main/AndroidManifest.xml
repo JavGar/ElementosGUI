@@ -18,7 +18,10 @@
         <activity android:name=".tabhost.MiTabHost" />
         <activity android:name=".tabhost.MiTabHost2" />
         <activity android:name=".tabhost.MiTab1" />
-        <activity android:name=".listview.MiListView"></activity>
+        <activity android:name=".listview.MiListView" />
+        <activity android:name=".radiogroup.MiRadioGroup" />
+        <activity android:name=".listview.MiListView2" />
+        <activity android:name=".radiogroup.MiRadioGroup2"></activity>
     </application>
 
 </manifest>
