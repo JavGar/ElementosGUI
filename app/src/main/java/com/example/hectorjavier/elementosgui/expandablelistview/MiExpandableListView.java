@@ -18,8 +18,7 @@ public class MiExpandableListView extends AppCompatActivity {
 
     ArrayList<String> cabeceras = new ArrayList<String>();
 
-    // Declare Hash map for all headers and their corresponding values
-    HashMap<String, ArrayList<String>> childArrayList = new HashMap<String, ArrayList<String>>();
+    HashMap<String, ArrayList<String>> cabecera_elementos = new HashMap<String, ArrayList<String>>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +27,10 @@ public class MiExpandableListView extends AppCompatActivity {
 
         expandableListView = (ExpandableListView) findViewById(R.id.expListView);
 
-        // add headers values
         cabeceras.add("Dias de la Semana");
         cabeceras.add("Dias festivos");
         cabeceras.add("Colores");
 
-        // add add child content
         ArrayList<String> dias = new ArrayList<String>();
         dias.add("Domingo");
         dias.add("Lunes");
@@ -42,31 +39,23 @@ public class MiExpandableListView extends AppCompatActivity {
         dias.add("Jueves");
         dias.add("Viernes");
         dias.add("Sábado");
-
-        childArrayList.put(cabeceras.get(0), dias);
+        cabecera_elementos.put(cabeceras.get(0), dias);
 
         ArrayList<String> festivos = new ArrayList<String>();
         festivos.add("Navidad");
         festivos.add("Amor y Amistad");
         festivos.add("Trabajo");
         festivos.add("Independencia");
-
-        childArrayList.put(cabeceras.get(1), festivos);
+        cabecera_elementos.put(cabeceras.get(1), festivos);
 
         ArrayList<String> colores = new ArrayList<String>();
         colores.add("Rojo");
         colores.add("Verde");
         colores.add("Naranja");
+        cabecera_elementos.put(cabeceras.get(2), colores);
 
-        childArrayList.put(cabeceras.get(2), colores);
-
-
-        // declare adapter
-
-        adapter = new AdaptadorListaExpandible(getApplicationContext(), cabeceras,childArrayList);
-
+        adapter = new AdaptadorListaExpandible(getApplicationContext(), cabeceras,cabecera_elementos);
         expandableListView.setAdapter(adapter);
-
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
             @Override
