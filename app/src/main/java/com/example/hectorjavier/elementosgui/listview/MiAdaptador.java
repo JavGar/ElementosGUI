@@ -18,13 +18,11 @@ import java.util.List;
 public class MiAdaptador extends BaseAdapter {
 
     List<?> elementos;
-    int vista;
     Context context;
 
     public MiAdaptador(List<?> elementos, Context context) {
         this.elementos = elementos;
         this.context = context;
-        vista = R.layout.elemento_lista;
     }
 
     @Override
@@ -46,11 +44,12 @@ public class MiAdaptador extends BaseAdapter {
     public View getView(int position, View view, ViewGroup parent) {
         if(view == null){
             LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = li.inflate(vista,null);
-
-            ((TextView) view.findViewById(R.id.titulo)).setText( ((ElementoLista)elementos.get(position)).getTitulo());
-            ((ImageView) view.findViewById(R.id.imagen)).setImageResource(((ElementoLista) elementos.get(position)).getId_imagen());
+            view = li.inflate(R.layout.elemento_lista,null);
         }
+
+        ((TextView) view.findViewById(R.id.titulo)).setText( ((ElementoLista)elementos.get(position)).getTitulo());
+        ((ImageView) view.findViewById(R.id.imagen)).setImageResource(((ElementoLista) elementos.get(position)).getId_imagen());
+
         return view;
     }
 }

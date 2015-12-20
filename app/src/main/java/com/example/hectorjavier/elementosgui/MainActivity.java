@@ -9,6 +9,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.hectorjavier.elementosgui.expandablelistview.MiExpandableListView;
 import com.example.hectorjavier.elementosgui.gridview.MiGridView;
 import com.example.hectorjavier.elementosgui.listview.MiListView;
 import com.example.hectorjavier.elementosgui.listview.MiListView2;
@@ -35,6 +36,7 @@ public class MainActivity extends ListActivity {
         listValues.add("RadioGroup");
         listValues.add("RadioGroup2");
         listValues.add("GridView");
+        listValues.add("ExpandableListView");
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, listValues);
         setListAdapter(adapter);
     }
@@ -63,6 +65,9 @@ public class MainActivity extends ListActivity {
                 break;
             case 6:
                 startActivity(new Intent(getApplicationContext(), MiGridView.class));
+                break;
+            case 7:
+                startActivity(new Intent(getApplicationContext(), MiExpandableListView.class));
                 break;
             default:
                 Toast.makeText(getApplicationContext(),"Destino no definido",Toast.LENGTH_SHORT).show();
