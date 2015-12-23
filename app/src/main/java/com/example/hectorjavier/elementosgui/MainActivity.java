@@ -15,6 +15,7 @@ import com.example.hectorjavier.elementosgui.listview.MiListView;
 import com.example.hectorjavier.elementosgui.listview.MiListView2;
 import com.example.hectorjavier.elementosgui.radiogroup.MiRadioGroup;
 import com.example.hectorjavier.elementosgui.radiogroup.MiRadioGroup2;
+import com.example.hectorjavier.elementosgui.searchview.MiSearchView;
 import com.example.hectorjavier.elementosgui.tabhost.MiTabHost;
 import com.example.hectorjavier.elementosgui.tabhost.MiTabHost2;
 
@@ -37,6 +38,7 @@ public class MainActivity extends ListActivity {
         listValues.add("RadioGroup2");
         listValues.add("GridView");
         listValues.add("ExpandableListView");
+        listValues.add("SearchtView");
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, listValues);
         setListAdapter(adapter);
     }
@@ -68,6 +70,9 @@ public class MainActivity extends ListActivity {
                 break;
             case 7:
                 startActivity(new Intent(getApplicationContext(), MiExpandableListView.class));
+                break;
+            case 8:
+                startActivity(new Intent(getApplicationContext(), MiSearchView.class));
                 break;
             default:
                 Toast.makeText(getApplicationContext(),"Destino no definido",Toast.LENGTH_SHORT).show();
