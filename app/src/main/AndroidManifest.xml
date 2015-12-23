@@ -24,7 +24,8 @@
         <activity android:name=".radiogroup.MiRadioGroup2" />
         <activity android:name=".gridview.MiGridView" />
         <activity android:name=".expandablelistview.MiExpandableListView" />
-        <activity android:name=".searchview.MiSearchView"></activity>
+        <activity android:name=".searchview.MiSearchView" />
+        <activity android:name=".progresbar.MiProgressBar"></activity>
     </application>
 
 </manifest>
