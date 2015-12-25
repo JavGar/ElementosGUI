@@ -17,6 +17,7 @@ import com.example.hectorjavier.elementosgui.progresbar.MiProgressBar;
 import com.example.hectorjavier.elementosgui.radiogroup.MiRadioGroup;
 import com.example.hectorjavier.elementosgui.radiogroup.MiRadioGroup2;
 import com.example.hectorjavier.elementosgui.searchview.MiSearchView;
+import com.example.hectorjavier.elementosgui.seekbar.MiSeekBar;
 import com.example.hectorjavier.elementosgui.tabhost.MiTabHost;
 import com.example.hectorjavier.elementosgui.tabhost.MiTabHost2;
 
@@ -80,6 +81,9 @@ public class MainActivity extends ListActivity {
                 break;
             case 9:
                 startActivity(new Intent(getApplicationContext(), MiProgressBar.class));
+                break;
+            case 10:
+                startActivity(new Intent(getApplicationContext(), MiSeekBar.class));
                 break;
             case 11:
                 startActivity(new Intent(getApplicationContext(), MiWebView.class));
