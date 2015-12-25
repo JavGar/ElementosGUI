@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hectorjavier.elementosgui">
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -25,7 +27,8 @@
         <activity android:name=".gridview.MiGridView" />
         <activity android:name=".expandablelistview.MiExpandableListView" />
         <activity android:name=".searchview.MiSearchView" />
-        <activity android:name=".progresbar.MiProgressBar"></activity>
+        <activity android:name=".progresbar.MiProgressBar" />
+        <activity android:name=".MiWebView"></activity>
     </application>
 
 </manifest>

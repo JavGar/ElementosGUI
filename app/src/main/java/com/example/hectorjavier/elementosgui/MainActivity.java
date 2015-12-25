@@ -41,6 +41,8 @@ public class MainActivity extends ListActivity {
         listValues.add("ExpandableListView");
         listValues.add("SearchtView");
         listValues.add("ProgressBar");
+        listValues.add("SeekBar");
+        listValues.add("WebView");
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, listValues);
         setListAdapter(adapter);
     }
@@ -78,6 +80,9 @@ public class MainActivity extends ListActivity {
                 break;
             case 9:
                 startActivity(new Intent(getApplicationContext(), MiProgressBar.class));
+                break;
+            case 11:
+                startActivity(new Intent(getApplicationContext(), MiWebView.class));
                 break;
             default:
                 Toast.makeText(getApplicationContext(),"Destino no definido",Toast.LENGTH_SHORT).show();
