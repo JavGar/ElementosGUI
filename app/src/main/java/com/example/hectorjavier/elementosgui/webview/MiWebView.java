@@ -1,4 +1,4 @@
-package com.example.hectorjavier.elementosgui;
+package com.example.hectorjavier.elementosgui.webview;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.hectorjavier.elementosgui.R;
 
 public class MiWebView extends AppCompatActivity {
 

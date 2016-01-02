@@ -20,6 +20,7 @@ import com.example.hectorjavier.elementosgui.searchview.MiSearchView;
 import com.example.hectorjavier.elementosgui.seekbar.MiSeekBar;
 import com.example.hectorjavier.elementosgui.tabhost.MiTabHost;
 import com.example.hectorjavier.elementosgui.tabhost.MiTabHost2;
+import com.example.hectorjavier.elementosgui.webview.MiWebView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,9 @@ public class MainActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
+        Elementos que se muestran en la lista
+         */
         List<String> listValues = new ArrayList<>();
         listValues.add("TabHost");
         listValues.add("TabHost2");
@@ -44,10 +48,26 @@ public class MainActivity extends ListActivity {
         listValues.add("ProgressBar");
         listValues.add("SeekBar");
         listValues.add("WebView");
+        /*
+        Adaptador de un arreglo de tipo String, sirve para ligar cada elemento de la lista a una
+        vista definida que será la manera en que se muestren al usuario
+        Recibe:
+        - El Contexto de la aplicación.
+        - La vista que se aplicará a cada elemento de la lista
+        - La lista de elementos a mostrar al usuario
+         */
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, listValues);
+
+        /*
+        Se aplica el adaptador al elemento ListView en el archivo xml.
+        Al extender de un ListActivity se liga automáticamente el elemento con id="@android:id/list"
+         */
         setListAdapter(adapter);
     }
 
+    /*
+     * Método definido en ListActivity sirve para obtener información del elemento seleccionado de la lista
+     */
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
         Toast.makeText(getApplicationContext(),((TextView) v).getText(),Toast.LENGTH_SHORT).show();

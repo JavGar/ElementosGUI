@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hectorjavier.elementosgui.MiWebView">
+    tools:context=".webview.MiWebView">
 
     <EditText
         android:id="@+id/et_url"

@@ -28,7 +28,7 @@
         <activity android:name=".expandablelistview.MiExpandableListView" />
         <activity android:name=".searchview.MiSearchView" />
         <activity android:name=".progresbar.MiProgressBar" />
-        <activity android:name=".MiWebView" />
+        <activity android:name=".webview.MiWebView" />
         <activity android:name=".seekbar.MiSeekBar"></activity>
     </application>
 
